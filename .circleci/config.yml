@@ -9,18 +9,21 @@ jobs:
           name: Update apt-get
           command: sudo apt-get update
       - run:
-          name: install packer
-          command: sudo apt-get install packer -y          
+          name: install wget
+          command: sudo apt-get install wget zip unzip          
       - run:
           name: aws cli
           command: sudo pip install awscli
+      - run:
+          name: Download packer
+          command: wget -q https://releases.hashicorp.com/packer/1.5.4/packer_1.5.4_linux_amd64.zip
+            unzip packer_1.5.4_linux_amd64.zip       
       - run:
           name: Validate Packer Template
           command: ./packer validate ubuntu-ami.json
       - run:
           name: Build AMI
-          command: |
-            ./packer build \
+          command: packer build \
             ubuntu-ami.json
 workflows:
   version: 2
