@@ -7,11 +7,12 @@
     "builders": [
         {
             "type": "amazon-ebs",
-            "profile": "dev",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
             "region": "{{user `aws_region`}}",
             "instance_type": "t2.micro",
-            "source_ami": "{{user `source_ami`}}",
-            "ssh_username": "{{user `ssh_username`}}",
+            "source_ami": "ami-07ebfd5b3428b6f4d",
+            "ssh_username": "ubuntu",
             "ami_name": "csye6225_{{timestamp}}",
             "ami_description": "Ubuntu AMI for CSYE 6225 - Spring 2020",
             "launch_block_device_mappings": [
