@@ -1,7 +1,7 @@
 {
     "variables": {
-        "aws_region": "",
-        "source_ami": "",
+        "aws_region": "us-east-1",
+        "source_ami": "ami-07ebfd5b3428b6f4d",
         "ssh_username": "ubuntu"
     },
     "builders": [
