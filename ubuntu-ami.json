@@ -36,7 +36,8 @@
                 "timeout 180 /bin/bash -c 'until stat /var/lib/cloud/instance/boot-finished 2>/dev/null; do echo waiting ...; sleep 1; done'",
                 "sudo apt-get update -y",
                 "sudo apt-get install aptitude -f -y",
-                "sudo aptitude install nodejs -y"
+                "sudo aptitude install nodejs -y",
+                "sudo apt install npm -y"
             ]
         }
     ]
