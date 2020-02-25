@@ -2,3 +2,5 @@
 
 Follow below steps in order to start the application.
 
+Run
+
