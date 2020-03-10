@@ -37,7 +37,14 @@
                 "sudo apt-get update -y",
                 "sudo apt-get install aptitude -f -y",
                 "sudo aptitude install nodejs -y",
-                "sudo apt install npm -y"
+                "sudo apt install npm -y",
+                "sudo apt install ruby -y",
+                "sudo apt-get install wget -y",
+                "cd /home/ubuntu",
+                "wget https://codedeploy.floyed-pinto.me.s3.us-east-1.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto",
+                "sudo service codedeploy-agent status"
             ]
         }
     ]
