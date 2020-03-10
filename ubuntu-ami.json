@@ -41,7 +41,7 @@
                 "sudo apt install ruby -y",
                 "sudo apt-get install wget -y",
                 "cd /home/ubuntu",
-                "wget https://codedeploy.floyed-pinto.me.s3.{{user `aws_region`}}.amazonaws.com/latest/install",
+                "wget https://codedeploy.floyed-pinto.me.s3.{{user `aws_region`}}.amazonaws.com/latest/install --no-check-certificate",
                 "chmod +x ./install",
                 "sudo ./install auto",
                 "sudo service codedeploy-agent status"
