@@ -13,3 +13,8 @@ packer validate -var-file=./vars.json ubuntu-ami.json
 ```
 packer build -var-file=./vars.json ubuntu-ami.json
 ```
+
+## Running an instance of the AMI image
+
+* Launch the AMI image using the generated image under EC2 in the AWS console
+
